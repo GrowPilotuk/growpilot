@@ -7,6 +7,7 @@ export default function Order() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [notes, setNotes] = useState('');
+  const [paymentMethod, setPaymentMethod] = useState('paypal');
 
   const addonOptions = [
     { name: 'Express Delivery (+£50)', price: 50 },

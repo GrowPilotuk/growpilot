@@ -22,6 +22,45 @@ export default function Home() {
       </section>
 
 <section className="py-20 px-8 bg-gray-100 text-center">
+  <h2 className="text-5xl font-extrabold mb-12 text-green-800">Compare Our Packages</h2>
+  <div className="overflow-x-auto">
+    <table className="w-full border-collapse border border-gray-300 shadow-lg rounded-lg">
+      <thead className="bg-green-600 text-white">
+        <tr>
+          <th className="p-5 text-lg">Feature</th>
+          <th className="p-5 text-lg">Basic</th>
+          <th className="p-5 text-lg">Advanced</th>
+          <th className="p-5 text-lg">Full</th>
+        </tr>
+      </thead>
+      <tbody className="bg-white text-gray-800">
+        {[
+          ['Room and Plant Layout', true, true, true],
+          ['Basic Lighting Plan', true, true, true],
+          ['Ventilation System Design', false, true, true],
+          ['Watering System (IWS or Manual)', false, true, true],
+          ['Humidifier/Dehumidifier Layout', false, true, true],
+          ['Medium Strategy (Coco/Soil etc.)', false, true, true],
+          ['CO₂ Enrichment System', false, false, true],
+          ['Full Automation and Sensors', false, false, true],
+          ['Electrical Layout & Safety', false, false, true],
+          ['3D Visualization', false, false, true],
+          ['Expert Consultation', false, false, true]
+        ].map(([feature, basic, advanced, full], index) => (
+          <tr key={feature} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+            <td className="p-4 border border-gray-300 text-left">{feature}</td>
+            <td className="p-4 border border-gray-300 text-center">{basic ? '✅' : '❌'}</td>
+            <td className="p-4 border border-gray-300 text-center">{advanced ? '✅' : '❌'}</td>
+            <td className="p-4 border border-gray-300 text-center">{full ? '✅' : '❌'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<section className="py-20 px-8 bg-gray-100 text-center">
   <h2 className="text-4xl font-bold mb-8">Compare Our Packages</h2>
   <div className="overflow-x-auto">
     <table className="min-w-full table-auto border-collapse border border-gray-300 text-left text-sm">
