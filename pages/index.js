@@ -34,4 +34,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing Plans Section*
+      {/* Pricing Plans Section */}
+      <section id="pricing" className="py-16 px-8 bg-green-50 text-center">
+        <h2 className="text-4xl font-bold mb-12">Pricing</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="border p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-semibold mb-4">Starter</h3>
+            <p className="text-3xl font-bold mb-4">£19.99</p>
+            <p className="mb-6">1 custom grow room plan + basic equipment list.</p>
+            <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">Buy Starter</button>
+          </div>
+          <div className="border p-8 rounded-lg shadow-lg bg-green-100">
+            <h3 className="text-2xl font-semibold mb-4">Pro Grower</h3>
+            <p className="text-3xl font-bold mb-4">£39.99</p>
+            <p className="mb-6">3 grow room plans + detailed budget breakdown + equipment links.</p>
+            <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">Buy Pro</button>
+          </div>
+          <div className="border p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-semibold mb-4">Ultimate Lab</h3>
+            <p className="text-3xl font-bold mb-4">£89.99</p>
+            <p className="mb-6">Everything in Pro + 3D visualisation + expert consultation.</p>
+            <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">Buy Ultimate</button>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Reviews Section */}
+      <section className="py-16 px-8 bg-white text-center">
+        <h2 className="text-4xl font-bold mb-12">What Our Customers Say</h2>
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="p-6 border rounded-lg shadow">
+            <p>"Fantastic service! The plan was easy to follow and my grow room looks amazing."</p>
+            <p className="mt-4 font-semibold">- Alex T.</p>
+          </div>
+          <div className="p-6 border rounded-lg shadow">
+            <p>"Saved me so much time and money. Highly recommend to any new grower."</p>
+            <p className="mt-4 font-semibold">- Sarah J.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Section */}
+      <footer className="py-8 px-8 bg-green-600 text-white text-center">
+        <p>GrowPilot Designer © 2025 | All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
