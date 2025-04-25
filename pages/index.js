@@ -40,19 +40,19 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="border p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold mb-4">Starter</h3>
-            <p className="text-3xl font-bold mb-4">£19.99</p>
+            <p className="text-3xl font-bold mb-4">\u00a319.99</p>
             <p className="mb-6">1 custom grow room plan + basic equipment list.</p>
             <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">Buy Starter</button>
           </div>
           <div className="border p-8 rounded-lg shadow-lg bg-green-100">
             <h3 className="text-2xl font-semibold mb-4">Pro Grower</h3>
-            <p className="text-3xl font-bold mb-4">£39.99</p>
+            <p className="text-3xl font-bold mb-4">\u00a339.99</p>
             <p className="mb-6">3 grow room plans + detailed budget breakdown + equipment links.</p>
             <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">Buy Pro</button>
           </div>
           <div className="border p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold mb-4">Ultimate Lab</h3>
-            <p className="text-3xl font-bold mb-4">£89.99</p>
+            <p className="text-3xl font-bold mb-4">\u00a389.99</p>
             <p className="mb-6">Everything in Pro + 3D visualisation + expert consultation.</p>
             <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">Buy Ultimate</button>
           </div>
@@ -76,7 +76,7 @@ export default function Home() {
 
       {/* Footer Section */}
       <footer className="py-8 px-8 bg-green-600 text-white text-center">
-        <p>GrowPilot Designer © 2025 | All rights reserved.</p>
+        <p>GrowPilot Designer &copy; 2025 | All rights reserved.</p>
       </footer>
     </div>
   );
