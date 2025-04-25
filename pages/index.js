@@ -37,9 +37,11 @@ export default function Home() {
               <li>Basic ventilation suggestions</li>
               <li>1 design revision included</li>
             </ul>
-            <label className="block mt-4">
-              <input type="checkbox" className="mr-2" /> Add discounted purchase list (+£29)
-            </label>
+            <div className="text-left mb-6">
+              <p className="font-semibold mb-2">Optional Add-ons:</p>
+              <label className="block"><input type="checkbox" className="mr-2" /> 3D Visualization (+£100)</label>
+              <label className="block"><input type="checkbox" className="mr-2" /> Express Delivery (+£50)</label>
+            </div>
             <Link href="/order?plan=GrowBasic">
               <button className="bg-green-600 text-white w-full mt-6 py-3 rounded-3xl hover:bg-green-700">Choose GrowBasic</button>
             </Link>
@@ -55,9 +57,14 @@ export default function Home() {
               <li>2D visualisations</li>
               <li>2 design revisions included</li>
             </ul>
-            <label className="block mt-4">
-              <input type="checkbox" className="mr-2" /> Add discounted purchase list (+£29)
-            </label>
+            <div className="text-left mb-6">
+              <p className="font-semibold mb-2">Optional Add-ons:</p>
+              <label className="block"><input type="checkbox" className="mr-2" /> 3D Visualization (+£100)</label>
+              <label className="block"><input type="checkbox" className="mr-2" /> Hydroponic System Design (+£75)</label>
+              <label className="block"><input type="checkbox" className="mr-2" /> CO₂ Enrichment Plan (+£50)</label>
+              <label className="block"><input type="checkbox" className="mr-2" /> Cooling System Design (+£75)</label>
+              <label className="block"><input type="checkbox" className="mr-2" /> Express Delivery (+£50)</label>
+            </div>
             <Link href="/order?plan=GrowPro">
               <button className="bg-green-600 text-white w-full mt-6 py-3 rounded-3xl hover:bg-green-700">Choose GrowPro</button>
             </Link>
@@ -73,60 +80,38 @@ export default function Home() {
               <li>Full electrical and automation schematics</li>
               <li>Professional 3D visualisation</li>
             </ul>
-            <label className="block mt-4">
-              <input type="checkbox" className="mr-2" /> Add discounted purchase list (+£29)
-            </label>
+            <div className="text-left mb-6">
+              <p className="font-semibold mb-2">Optional Add-ons:</p>
+              <label className="block"><input type="checkbox" className="mr-2" /> Additional Online Consultation (£75/h)</label>
+              <label className="block"><input type="checkbox" className="mr-2" /> Express Delivery (+£50)</label>
+            </div>
             <Link href="/order?plan=GrowMaster">
               <button className="bg-green-600 text-white w-full mt-6 py-3 rounded-3xl hover:bg-green-700">Choose GrowMaster</button>
             </Link>
           </div>
         </div>
 
-        {/* Table Comparison */}
-        <div className="mt-20 overflow-x-auto">
-          <h3 className="text-3xl font-bold mb-6">Compare Packages</h3>
-          <table className="table-auto w-full text-left border-collapse">
-            <thead>
-              <tr>
-                <th className="p-4 border">Feature</th>
-                <th className="p-4 border">GrowBasic</th>
-                <th className="p-4 border">GrowPro</th>
-                <th className="p-4 border">GrowMaster</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="p-4 border">Lighting Design</td>
-                <td className="p-4 border">✅</td>
-                <td className="p-4 border">✅</td>
-                <td className="p-4 border">✅</td>
-              </tr>
-              <tr>
-                <td className="p-4 border">Ventilation Design</td>
-                <td className="p-4 border">❌</td>
-                <td className="p-4 border">✅</td>
-                <td className="p-4 border">✅</td>
-              </tr>
-              <tr>
-                <td className="p-4 border">CO₂ System Design</td>
-                <td className="p-4 border">❌</td>
-                <td className="p-4 border">Optional</td>
-                <td className="p-4 border">✅</td>
-              </tr>
-              <tr>
-                <td className="p-4 border">Watering System (IVS/Aquaponics)</td>
-                <td className="p-4 border">❌</td>
-                <td className="p-4 border">Optional</td>
-                <td className="p-4 border">✅</td>
-              </tr>
-              <tr>
-                <td className="p-4 border">Full Electrical Schematics</td>
-                <td className="p-4 border">❌</td>
-                <td className="p-4 border">❌</td>
-                <td className="p-4 border">✅</td>
-              </tr>
-            </tbody>
-          </table>
+        {/* Add-ons Full List Section */}
+        <div className="mt-20 text-center">
+          <h3 className="text-3xl font-bold mb-6">🌟 Add-ons for Your Grow Room</h3>
+          <div className="grid md:grid-cols-2 gap-8 text-left">
+            <ul className="list-disc list-inside">
+              <li>Grow Tent / Room Setup</li>
+              <li>Lighting Systems (LED, HPS, CMH)</li>
+              <li>Lighting Controllers and Contactors</li>
+              <li>Ventilation and Carbon Filters</li>
+              <li>Cooling Systems (AC units)</li>
+              <li>CO₂ Enrichment Systems</li>
+            </ul>
+            <ul className="list-disc list-inside">
+              <li>Watering Systems (IVS, Hydroponics)</li>
+              <li>Growing Mediums (Soil, Coco, Clay)</li>
+              <li>Nutrients and pH Solutions</li>
+              <li>Propagation Rooms</li>
+              <li>Environmental Controllers</li>
+              <li>Harvest Equipment and Storage</li>
+            </ul>
+          </div>
         </div>
 
         <div className="mt-16">
