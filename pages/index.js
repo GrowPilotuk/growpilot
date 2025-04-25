@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -32,20 +33,16 @@ export default function Home() {
             <p className="text-3xl font-bold mb-4">£149</p>
             <ul className="text-left mb-6 list-disc list-inside">
               <li>Custom grow room plan (up to 4 m²)</li>
-              <li>Budget-friendly equipment recommendations</li>
               <li>Lighting design (LED / HPS / CMH)</li>
               <li>Basic ventilation suggestions</li>
               <li>1 design revision included</li>
-              <li>Delivery within 5 working days</li>
             </ul>
-            <div className="mb-4 text-left">
-              <p className="font-semibold mb-2">Optional Add-ons:</p>
-              <p>Express Delivery (+£50), 3D Visualisation (+£100)</p>
-            </div>
             <label className="block mt-4">
               <input type="checkbox" className="mr-2" /> Add discounted purchase list (+£29)
             </label>
-            <button className="bg-green-600 text-white w-full mt-6 py-3 rounded-3xl hover:bg-green-700">Choose GrowBasic</button>
+            <Link href="/order?plan=GrowBasic">
+              <button className="bg-green-600 text-white w-full mt-6 py-3 rounded-3xl hover:bg-green-700">Choose GrowBasic</button>
+            </Link>
           </div>
 
           {/* GrowPro Card */}
@@ -53,21 +50,17 @@ export default function Home() {
             <h3 className="text-2xl font-semibold mb-4">⚡ GrowPro – Advanced Package</h3>
             <p className="text-3xl font-bold mb-4">£349</p>
             <ul className="text-left mb-6 list-disc list-inside">
-              <li>Personalized grow room plan (up to 10 m²)</li>
-              <li>Lighting + ventilation + basic automation</li>
-              <li>Two layout options: economy vs performance</li>
-              <li>2D preliminary visualisations</li>
+              <li>GrowBasic features +</li>
+              <li>Full ventilation design</li>
+              <li>2D visualisations</li>
               <li>2 design revisions included</li>
-              <li>Delivery within 7 working days</li>
             </ul>
-            <div className="mb-4 text-left">
-              <p className="font-semibold mb-2">Optional Add-ons:</p>
-              <p>Express Delivery (+£50), 3D Visualisation (+£100), Hydroponics Design (+£75), CO₂ Enrichment Plan (+£50)</p>
-            </div>
             <label className="block mt-4">
               <input type="checkbox" className="mr-2" /> Add discounted purchase list (+£29)
             </label>
-            <button className="bg-green-600 text-white w-full mt-6 py-3 rounded-3xl hover:bg-green-700">Choose GrowPro</button>
+            <Link href="/order?plan=GrowPro">
+              <button className="bg-green-600 text-white w-full mt-6 py-3 rounded-3xl hover:bg-green-700">Choose GrowPro</button>
+            </Link>
           </div>
 
           {/* GrowMaster Card */}
@@ -75,22 +68,65 @@ export default function Home() {
             <h3 className="text-2xl font-semibold mb-4">🚀 GrowMaster – Professional Package</h3>
             <p className="text-3xl font-bold mb-4">£699</p>
             <ul className="text-left mb-6 list-disc list-inside">
-              <li>Custom plan (up to 25 m² or larger)</li>
-              <li>Lighting + CO₂ + IVS watering + full automation</li>
-              <li>Professional 3D visualisations</li>
-              <li>Electrical, irrigation, ventilation schematics</li>
-              <li>1-hour online consultation</li>
-              <li>Delivery within 10–14 working days</li>
+              <li>GrowPro features +</li>
+              <li>CO₂ Enrichment + IVS watering system</li>
+              <li>Full electrical and automation schematics</li>
+              <li>Professional 3D visualisation</li>
             </ul>
-            <div className="mb-4 text-left">
-              <p className="font-semibold mb-2">Optional Add-ons:</p>
-              <p>Express Delivery (+£50), Additional Consultations (£75/h)</p>
-            </div>
             <label className="block mt-4">
               <input type="checkbox" className="mr-2" /> Add discounted purchase list (+£29)
             </label>
-            <button className="bg-green-600 text-white w-full mt-6 py-3 rounded-3xl hover:bg-green-700">Choose GrowMaster</button>
+            <Link href="/order?plan=GrowMaster">
+              <button className="bg-green-600 text-white w-full mt-6 py-3 rounded-3xl hover:bg-green-700">Choose GrowMaster</button>
+            </Link>
           </div>
+        </div>
+
+        {/* Table Comparison */}
+        <div className="mt-20 overflow-x-auto">
+          <h3 className="text-3xl font-bold mb-6">Compare Packages</h3>
+          <table className="table-auto w-full text-left border-collapse">
+            <thead>
+              <tr>
+                <th className="p-4 border">Feature</th>
+                <th className="p-4 border">GrowBasic</th>
+                <th className="p-4 border">GrowPro</th>
+                <th className="p-4 border">GrowMaster</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="p-4 border">Lighting Design</td>
+                <td className="p-4 border">✅</td>
+                <td className="p-4 border">✅</td>
+                <td className="p-4 border">✅</td>
+              </tr>
+              <tr>
+                <td className="p-4 border">Ventilation Design</td>
+                <td className="p-4 border">❌</td>
+                <td className="p-4 border">✅</td>
+                <td className="p-4 border">✅</td>
+              </tr>
+              <tr>
+                <td className="p-4 border">CO₂ System Design</td>
+                <td className="p-4 border">❌</td>
+                <td className="p-4 border">Optional</td>
+                <td className="p-4 border">✅</td>
+              </tr>
+              <tr>
+                <td className="p-4 border">Watering System (IVS/Aquaponics)</td>
+                <td className="p-4 border">❌</td>
+                <td className="p-4 border">Optional</td>
+                <td className="p-4 border">✅</td>
+              </tr>
+              <tr>
+                <td className="p-4 border">Full Electrical Schematics</td>
+                <td className="p-4 border">❌</td>
+                <td className="p-4 border">❌</td>
+                <td className="p-4 border">✅</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <div className="mt-16">
