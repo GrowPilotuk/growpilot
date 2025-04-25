@@ -88,28 +88,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-20 px-8 bg-white text-center">
-        <h2 className="text-4xl font-bold mb-8">Why Choose GrowPilot?</h2>
-        <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          <div>
-            <Image src="https://img.icons8.com/color/96/artificial-intelligence.png" alt="AI" width={64} height={64} className="mx-auto mb-4" />
-            <h4 className="text-xl font-semibold mb-2">AI-Powered Design</h4>
-            <p>Every plan is generated with the help of artificial intelligence for accuracy and efficiency.</p>
-          </div>
-          <div>
-            <Image src="https://img.icons8.com/color/96/discount.png" alt="Discount" width={64} height={64} className="mx-auto mb-4" />
-            <h4 className="text-xl font-semibold mb-2">Exclusive Discounts</h4>
-            <p>Get up to 10% off on equipment with our partner suppliers and curated shopping lists.</p>
-          </div>
-          <div>
-            <Image src="https://img.icons8.com/color/96/fast-cart.png" alt="Fast Delivery" width={64} height={64} className="mx-auto mb-4" />
-            <h4 className="text-xl font-semibold mb-2">Fast Turnaround</h4>
-            <p>Your custom plan is delivered in just a few days – express options available.</p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
