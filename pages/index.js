@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="bg-white text-gray-900">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col justify-center items-center text-center p-8 bg-green-900">
+      <section className="relative min-h-screen flex flex-col justify-center items-center text-center p-8 bg-green-900 transition-opacity duration-1000 opacity-0 animate-fadeIn">
         <Image src="https://images.unsplash.com/photo-1587300003388-59208cc962cb" alt="Grow Room" layout="fill" objectFit="cover" className="opacity-40 z-0" />
         <div className="relative z-10">
           <h1 className="text-5xl font-extrabold mb-6 text-white">GrowPilot Designer</h1>
@@ -21,7 +21,7 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 px-8 bg-green-50 text-center">
+      <section className="py-20 px-8 bg-green-50 text-center transition-all duration-1000 opacity-0 animate-slideUp">
         <h2 className="text-4xl font-bold mb-12">How It Works</h2>
         <div className="grid md:grid-cols-3 gap-12">
           <div className="flex flex-col items-center">
@@ -43,7 +43,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Plans Section */}
-      <section id="pricing" className="py-20 px-8 bg-gradient-to-b from-green-50 to-green-100 text-center">
+      <section id="pricing" className="py-20 px-8 bg-gradient-to-b from-green-50 to-green-100 text-center transition-all duration-1000 opacity-0 animate-fadeIn">
         <h2 className="text-4xl font-bold mb-12">Pricing</h2>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="border p-8 rounded-3xl shadow-2xl hover:scale-105 transition">
@@ -68,7 +68,7 @@ export default function Home() {
       </section>
 
       {/* Customer Reviews Section */}
-      <section className="py-20 px-8 bg-white text-center">
+      <section className="py-20 px-8 bg-white text-center transition-all duration-1000 opacity-0 animate-slideUp">
         <h2 className="text-4xl font-bold mb-12">What Our Customers Say</h2>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="p-6 border rounded-3xl shadow-xl flex flex-col items-center">
