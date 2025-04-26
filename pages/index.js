@@ -1,115 +1,99 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div className="bg-white text-gray-900">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col justify-center items-center text-center p-8 bg-green-900">
-        <Image src="https://images.unsplash.com/photo-1587300003388-59208cc962cb" alt="Grow Room" layout="fill" objectFit="cover" className="opacity-40 z-0" />
-        <div className="relative z-10">
-          <h1 className="text-5xl font-extrabold mb-6 text-white">GrowPilot Designer</h1>
-          <p className="text-xl mb-8 max-w-2xl text-white">
-            Tailored grow room plans for every level. Build smarter, grow better.
-          </p>
-          <a
-            href="#plans"
-            className="bg-green-600 text-white px-8 py-4 rounded-3xl text-lg hover:bg-green-700 transition"
-          >
-            Choose Your Plan
-          </a>
+    <div>
+      <Head>
+        <title>GrowRoom Designer - Personalized Grow Room Plans</title>
+        <meta name="description" content="We design customized grow room plans for your indoor cultivation success in the UK." />
+        <meta property="og:title" content="GrowRoom Designer" />
+        <meta property="og:description" content="Personalized grow room plans to maximize your indoor gardening success." />
+        <meta property="og:type" content="website" />
+      </Head>
+
+      <header className="p-6 bg-green-600 text-white">
+        <h1 className="text-3xl font-bold">GrowRoom Designer</h1>
+        <nav className="mt-4">
+          <ul className="flex gap-4">
+            <li><a href="#about">About</a></li>
+            <li><a href="#compare">Compare Packages</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section className="p-6" id="about">
+        <h2 className="text-2xl font-semibold mb-4">About Us</h2>
+        <p>We create personalized grow room plans to help you cultivate with confidence and efficiency in the UK market.</p>
+      </section>
+
+      <section className="p-6 bg-gray-100" id="compare">
+        <h2 className="text-2xl font-semibold mb-6">Compare Our Packages</h2>
+        <div className="overflow-x-auto">
+          <table className="min-w-full table-auto border">
+            <thead>
+              <tr>
+                <th className="border p-2">Feature</th>
+                <th className="border p-2">Starter</th>
+                <th className="border p-2">Advanced</th>
+                <th className="border p-2">Professional</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border p-2">Custom Room Layout</td>
+                <td className="border p-2">✔️</td>
+                <td className="border p-2">✔️</td>
+                <td className="border p-2">✔️</td>
+              </tr>
+              <tr>
+                <td className="border p-2">Lighting Plan</td>
+                <td className="border p-2">Basic</td>
+                <td className="border p-2">Advanced</td>
+                <td className="border p-2">Pro-Grade</td>
+              </tr>
+              <tr>
+                <td className="border p-2">Ventilation Strategy</td>
+                <td className="border p-2">Standard</td>
+                <td className="border p-2">Optimized</td>
+                <td className="border p-2">Tailored</td>
+              </tr>
+              <tr>
+                <td className="border p-2">Equipment List</td>
+                <td className="border p-2">✔️</td>
+                <td className="border p-2">✔️</td>
+                <td className="border p-2">Detailed</td>
+              </tr>
+              <tr>
+                <td className="border p-2">Yield Estimate</td>
+                <td className="border p-2">-</td>
+                <td className="border p-2">✔️</td>
+                <td className="border p-2">✔️</td>
+              </tr>
+              <tr>
+                <td className="border p-2">Personalized Support</td>
+                <td className="border p-2">-</td>
+                <td className="border p-2">Email</td>
+                <td className="border p-2">Phone & Email</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
-      {/* Packages Section */}
-      <section id="plans" className="py-20 px-8 bg-green-50 text-center">
-        <h2 className="text-4xl font-bold mb-8">Modular Grow Room Packages</h2>
-        <p className="max-w-3xl mx-auto mb-16">
-          Whether you’re a hobby grower or building a professional setup – we’ve got you covered with step-by-step designs and expert options.
-        </p>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Basic Room Setup */}
-          <div className="border p-8 rounded-3xl shadow-2xl hover:scale-105 transition bg-white">
-            <Image src="https://img.icons8.com/fluency/96/seedling.png" alt="Seedling" width={64} height={64} className="mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">🧩 Basic Room Setup</h3>
-            <p className="text-lg mb-2">Perfect for beginners</p>
-            <p className="text-3xl font-bold mb-4">£149</p>
-            <ul className="text-left mb-6 list-disc list-inside">
-              <li>Grow Tent or Room Layout</li>
-              <li>Plant Positioning & Spacing Plan</li>
-              <li>Basic Lighting Plan (LED, HPS, CMH)</li>
-              <li>Basic Ventilation Positioning</li>
-              <li>Odor Control Recommendation</li>
-              <li>Basic Equipment Shopping List</li>
-            </ul>
-            <Link href="/order?plan=Basic Room Setup">
-              <button className="bg-green-600 text-white w-full py-3 rounded-3xl hover:bg-green-700">Get Basic Plan</button>
-            </Link>
-          </div>
-
-          {/* Advanced Environment */}
-          <div className="border p-8 rounded-3xl shadow-2xl hover:scale-105 transition bg-green-100">
-            <Image src="https://img.icons8.com/fluency/96/eco-care.png" alt="Eco" width={64} height={64} className="mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">🧩 Advanced Environment</h3>
-            <p className="text-lg mb-2">For climate-aware growers</p>
-            <p className="text-3xl font-bold mb-4">£399</p>
-            <ul className="text-left mb-6 list-disc list-inside">
-              <li>Everything in Basic Plan</li>
-              <li>Full Ventilation System Design</li>
-              <li>IWS or Manual Watering System</li>
-              <li>Humidifier/Dehumidifier Layout</li>
-              <li>Medium Strategy (Coco, Soil, Rockwool)</li>
-              <li>Shopping List with Discounts</li>
-            </ul>
-            <Link href="/order?plan=Advanced Environment">
-              <button className="bg-green-600 text-white w-full py-3 rounded-3xl hover:bg-green-700">Get Advanced Plan</button>
-            </Link>
-          </div>
-
-          {/* Full Smart Grow */}
-          <div className="border p-8 rounded-3xl shadow-2xl hover:scale-105 transition bg-white">
-            <Image src="https://img.icons8.com/fluency/96/artificial-intelligence.png" alt="AI Grow" width={64} height={64} className="mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">🧩 Full Smart Grow</h3>
-            <p className="text-lg mb-2">For serious professionals</p>
-            <p className="text-3xl font-bold mb-4">£899</p>
-            <ul className="text-left mb-6 list-disc list-inside">
-              <li>Everything in Advanced Plan</li>
-              <li>CO₂ Enrichment System</li>
-              <li>Full Automation Plan</li>
-              <li>Smart Sensors (Temp, pH, EC)</li>
-              <li>Electrical Layout & Safety</li>
-              <li>3D Visualization</li>
-              <li>Consultation & Support</li>
-            </ul>
-            <Link href="/order?plan=Full Smart Grow">
-              <button className="bg-green-600 text-white w-full py-3 rounded-3xl hover:bg-green-700">Get Full Plan</button>
-            </Link>
-          </div>
-        </div>
+      <section className="p-6" id="contact">
+        <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
+        <form className="flex flex-col gap-4 max-w-md">
+          <input type="text" placeholder="Your Name" className="p-2 border" required />
+          <input type="email" placeholder="Your Email" className="p-2 border" required />
+          <textarea placeholder="Your Message" className="p-2 border" required></textarea>
+          <button type="submit" className="p-2 bg-green-600 text-white">Send Message</button>
+        </form>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 px-8 bg-white text-center">
-        <h2 className="text-4xl font-bold mb-8">Why Choose GrowPilot?</h2>
-        <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          <div>
-            <Image src="https://img.icons8.com/color/96/artificial-intelligence.png" alt="AI" width={64} height={64} className="mx-auto mb-4" />
-            <h4 className="text-xl font-semibold mb-2">AI-Powered Design</h4>
-            <p>Every plan is generated with the help of artificial intelligence for accuracy and efficiency.</p>
-          </div>
-          <div>
-            <Image src="https://img.icons8.com/color/96/discount.png" alt="Discount" width={64} height={64} className="mx-auto mb-4" />
-            <h4 className="text-xl font-semibold mb-2">Exclusive Discounts</h4>
-            <p>Get up to 10% off on equipment with our partner suppliers and curated shopping lists.</p>
-          </div>
-          <div>
-            <Image src="https://img.icons8.com/color/96/fast-cart.png" alt="Fast Delivery" width={64} height={64} className="mx-auto mb-4" />
-            <h4 className="text-xl font-semibold mb-2">Fast Turnaround</h4>
-            <p>Your custom plan is delivered in just a few days – express options available.</p>
-          </div>
-        </div>
-      </section>
+      <footer className="p-6 bg-green-600 text-white text-center">
+        <p>&copy; 2025 GrowRoom Designer. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
