@@ -1,115 +1,110 @@
-import Image from 'next/image';
-import Link from 'next/link';
+
+import Head from "next/head";
+import "../styles/globals.css";
 
 export default function Home() {
   return (
-    <div className="bg-white text-gray-900">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col justify-center items-center text-center p-8 bg-green-900">
-        <Image src="https://images.unsplash.com/photo-1587300003388-59208cc962cb" alt="Grow Room" layout="fill" objectFit="cover" className="opacity-40 z-0" />
-        <div className="relative z-10">
-          <h1 className="text-5xl font-extrabold mb-6 text-white">GrowPilot Designer</h1>
-          <p className="text-xl mb-8 max-w-2xl text-white">
-            Tailored grow room plans for every level. Build smarter, grow better.
-          </p>
-          <a
-            href="#plans"
-            className="bg-green-600 text-white px-8 py-4 rounded-3xl text-lg hover:bg-green-700 transition"
-          >
-            Choose Your Plan
-          </a>
-        </div>
-      </section>
+    <div>
+      <Head>
+        <title>GrowPilot - Modular Grow Room Packages</title>
+      </Head>
 
-      {/* Packages Section */}
-      <section id="plans" className="py-20 px-8 bg-green-50 text-center">
-        <h2 className="text-4xl font-bold mb-8">Modular Grow Room Packages</h2>
-        <p className="max-w-3xl mx-auto mb-16">
-          Whether you’re a hobby grower or building a professional setup – we’ve got you covered with step-by-step designs and expert options.
-        </p>
+      <main className="container">
+        <h1 className="main-title">Modular Grow Room Packages</h1>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Basic Room Setup */}
-          <div className="border p-8 rounded-3xl shadow-2xl hover:scale-105 transition bg-white">
-            <Image src="https://img.icons8.com/fluency/96/seedling.png" alt="Seedling" width={64} height={64} className="mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">🧩 Basic Room Setup</h3>
-            <p className="text-lg mb-2">Perfect for beginners</p>
-            <p className="text-3xl font-bold mb-4">£149</p>
-            <ul className="text-left mb-6 list-disc list-inside">
+        <div className="packages">
+          <div className="package">
+            <h2 className="package-title">Basic Room Setup</h2>
+            <p className="package-desc">For beginners setting up a small tent or grow room (up to 4 m²).</p>
+            <ul className="package-list">
               <li>Grow Tent or Room Layout</li>
               <li>Plant Positioning & Spacing Plan</li>
               <li>Basic Lighting Plan (LED, HPS, CMH)</li>
               <li>Basic Ventilation Positioning</li>
               <li>Odor Control Recommendation</li>
-              <li>Basic Equipment Shopping List</li>
+              <li>Basic Equipment Shopping List (no discounts)</li>
             </ul>
-            <Link href="/order?plan=Basic Room Setup">
-              <button className="bg-green-600 text-white w-full py-3 rounded-3xl hover:bg-green-700">Get Basic Plan</button>
-            </Link>
+            <p className="package-price">£149</p>
           </div>
 
-          {/* Advanced Environment */}
-          <div className="border p-8 rounded-3xl shadow-2xl hover:scale-105 transition bg-green-100">
-            <Image src="https://img.icons8.com/fluency/96/eco-care.png" alt="Eco" width={64} height={64} className="mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">🧩 Advanced Environment</h3>
-            <p className="text-lg mb-2">For climate-aware growers</p>
-            <p className="text-3xl font-bold mb-4">£399</p>
-            <ul className="text-left mb-6 list-disc list-inside">
-              <li>Everything in Basic Plan</li>
+          <div className="package">
+            <h2 className="package-title">Advanced Environment</h2>
+            <p className="package-desc">For intermediate growers needing climate control and irrigation.</p>
+            <ul className="package-list">
+              <li>Everything in Basic Room Setup</li>
               <li>Full Ventilation System Design</li>
-              <li>IWS or Manual Watering System</li>
-              <li>Humidifier/Dehumidifier Layout</li>
+              <li>Manual or Automated Watering System (IWS)</li>
+              <li>Humidifier / Dehumidifier Placement</li>
               <li>Medium Strategy (Coco, Soil, Rockwool)</li>
-              <li>Shopping List with Discounts</li>
+              <li>Equipment Shopping List with up to 10% Discount</li>
             </ul>
-            <Link href="/order?plan=Advanced Environment">
-              <button className="bg-green-600 text-white w-full py-3 rounded-3xl hover:bg-green-700">Get Advanced Plan</button>
-            </Link>
+            <p className="package-price">£399</p>
           </div>
 
-          {/* Full Smart Grow */}
-          <div className="border p-8 rounded-3xl shadow-2xl hover:scale-105 transition bg-white">
-            <Image src="https://img.icons8.com/fluency/96/artificial-intelligence.png" alt="AI Grow" width={64} height={64} className="mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">🧩 Full Smart Grow</h3>
-            <p className="text-lg mb-2">For serious professionals</p>
-            <p className="text-3xl font-bold mb-4">£899</p>
-            <ul className="text-left mb-6 list-disc list-inside">
-              <li>Everything in Advanced Plan</li>
-              <li>CO₂ Enrichment System</li>
-              <li>Full Automation Plan</li>
-              <li>Smart Sensors (Temp, pH, EC)</li>
-              <li>Electrical Layout & Safety</li>
-              <li>3D Visualization</li>
-              <li>Consultation & Support</li>
+          <div className="package">
+            <h2 className="package-title">Full Smart Grow</h2>
+            <p className="package-desc">For professional growers needing full automation and control.</p>
+            <ul className="package-list">
+              <li>Everything in Advanced Environment</li>
+              <li>CO₂ Enrichment System Plan</li>
+              <li>Full Automation Design (lighting, climate, irrigation)</li>
+              <li>Smart Sensor Setup (Temperature, Humidity, pH, EC)</li>
+              <li>Electrical Layout (Contactors, Safety Timers)</li>
+              <li>Pest Management & Clean Room Strategy</li>
+              <li>Professional 3D Visualization</li>
+              <li>Complete Shopping List with Discounts</li>
+              <li>30 Days Email Support + 30-min Online Consultation</li>
             </ul>
-            <Link href="/order?plan=Full Smart Grow">
-              <button className="bg-green-600 text-white w-full py-3 rounded-3xl hover:bg-green-700">Get Full Plan</button>
-            </Link>
+            <p className="package-price">£899</p>
           </div>
         </div>
-      </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 px-8 bg-white text-center">
-        <h2 className="text-4xl font-bold mb-8">Why Choose GrowPilot?</h2>
-        <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          <div>
-            <Image src="https://img.icons8.com/color/96/artificial-intelligence.png" alt="AI" width={64} height={64} className="mx-auto mb-4" />
-            <h4 className="text-xl font-semibold mb-2">AI-Powered Design</h4>
-            <p>Every plan is generated with the help of artificial intelligence for accuracy and efficiency.</p>
+        <section className="comparison-section">
+          <h2 className="comparison-title">Compare Our Packages</h2>
+          <div className="table-wrapper">
+            <table className="comparison-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Basic Room Setup</th>
+                  <th>Advanced Environment</th>
+                  <th>Full Smart Grow</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { feature: "Grow Tent/Room Layout", basic: true, advanced: true, full: true },
+                  { feature: "Plant Positioning & Spacing Plan", basic: true, advanced: true, full: true },
+                  { feature: "Basic Lighting Plan", basic: true, advanced: true, full: true },
+                  { feature: "Basic Ventilation Positioning", basic: true, advanced: true, full: true },
+                  { feature: "Odor Control Recommendation", basic: true, advanced: true, full: true },
+                  { feature: "Basic Equipment Shopping List", basic: true, advanced: true, full: true },
+                  { feature: "Full Ventilation System Design", basic: false, advanced: true, full: true },
+                  { feature: "Manual or Automated Watering", basic: false, advanced: true, full: true },
+                  { feature: "Climate Control (Humidity/Dehumidifier)", basic: false, advanced: true, full: true },
+                  { feature: "Medium Strategy (Coco, Soil, Rockwool)", basic: false, advanced: true, full: true },
+                  { feature: "CO₂ Enrichment System", basic: false, advanced: false, full: true },
+                  { feature: "Full Automation Plan", basic: false, advanced: false, full: true },
+                  { feature: "Smart Sensors Setup", basic: false, advanced: false, full: true },
+                  { feature: "Electrical Layout Plan", basic: false, advanced: false, full: true },
+                  { feature: "Pest Management Strategy", basic: false, advanced: false, full: true },
+                  { feature: "Professional 3D Visualization", basic: "Optional (+£100)", advanced: "Optional (+£100)", full: "Included" },
+                  { feature: "Equipment Discounts", basic: false, advanced: true, full: true },
+                  { feature: "Online Consultation", basic: false, advanced: false, full: "Included (30min)" },
+                  { feature: "Email Support", basic: false, advanced: false, full: "30 Days" },
+                ].map((item, idx) => (
+                  <tr key={idx}>
+                    <td>{item.feature}</td>
+                    <td className="text-center">{typeof item.basic === "boolean" ? (item.basic ? "✓" : "–") : item.basic}</td>
+                    <td className="text-center">{typeof item.advanced === "boolean" ? (item.advanced ? "✓" : "–") : item.advanced}</td>
+                    <td className="text-center">{typeof item.full === "boolean" ? (item.full ? "✓" : "–") : item.full}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-          <div>
-            <Image src="https://img.icons8.com/color/96/discount.png" alt="Discount" width={64} height={64} className="mx-auto mb-4" />
-            <h4 className="text-xl font-semibold mb-2">Exclusive Discounts</h4>
-            <p>Get up to 10% off on equipment with our partner suppliers and curated shopping lists.</p>
-          </div>
-          <div>
-            <Image src="https://img.icons8.com/color/96/fast-cart.png" alt="Fast Delivery" width={64} height={64} className="mx-auto mb-4" />
-            <h4 className="text-xl font-semibold mb-2">Fast Turnaround</h4>
-            <p>Your custom plan is delivered in just a few days – express options available.</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </div>
   );
 }
